@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/700x400/?white');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            font-family: Arial, sans-serif; /* Specify your preferred font family */
+        }
+        .template-button {
+            background-color: #3498db; /* Add your preferred color */
+            color: white;
+            padding: 8px 16px;
+            margin: 8px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .button-container button {
+            margin: 0 10px;
+        }
+    </style>
+    <title>Resume Builder</title>
+</head>
+<body>
+    <header>
+        <div class="flex justify-center bg-no-repeat bg-cover h-full md:bg-center"
+            style="background-image:url('https://source.unsplash.com/700x400/?white')">
+            <div class="flex flex-col items-center">
+                <nav class="self-center w-full max-w-7xl">
+                    <div class="flex md:flex-row flex-col justify-between items-right md:items-start border-b-2 border-blue-900">
+                        <h1 class="py-4 text-2xl font-sans font-bold px-10">RESUME BUILDERS</h1>
+                        <ul class="flex items-center text-sm md:text-[18px] font-bold md:px-10 my-2">
+                            <!-- Add navigation items here -->
+                        </ul>
+                    </div>
+                </nav>
+                <div class="flex flex-col justify-center items-center text-center max-w-7xl my-8 py-4 px-10">
+                    <h1 class="text-base font-medium tracking-wider">Welcome to Coding raja technologies</h1>
+                    <span class="underline underline-offset-2 text-gray-700-mt-3"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; </span>
+                    <div class="flex flex-col text-gray-700mt-5">
+                        <h1 class="text-4xl md:text-[50px] font-semibold">Hello I'm Ravi chandra reddy</h1>
+                        <p class="text-xl mt-2 md:mt-4 tracking-wide">Designer - Developer - Freelancer</p>
+                    </div>
+                    <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">A good Resume Makes your career Great.</p>
+                    <div class="space-x-3 mt-6 md:mt-4 text-white">
+                        <!-- Add social media links here -->
+                    </div>
+                    <div class="flex mt-10 button-container">
+                        <button class="bg-white text-blue-900 px-6 py-2 hover:brightness-105 font-semibold">Read
+                            More</button>
+                        <button class="bg-blue-900 text-white border-2 border-white px-6 py-2 hover:brightness-105 font-semibold" onclick="displayPhoneNumber()">Contact
+                            Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="template-selection">
+            <h2>Select a Template</h2>
+            <!-- Template selection options go here -->
+            <div class="button-container">
+                <button id="template1Button" class="template-button">Template 1</button>
+                <button id="template2Button" class="template-button">Template 2</button>
+            </div>
+        </section>
+        <section id="template1" style="display: none;">
+            <!-- Template 1 content here -->
+            <!-- Participant Name -->
+            <h3>Participant Name</h3>
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            
+            <!-- Education -->
+            <h3>Education</h3>
+            <div class="education-entry">
+                <input type="text" class="education-school" placeholder="School/University">
+                <input type="text" class="education-degree" placeholder="Degree">
+                <input type="text" class="education-year" placeholder="Year">
+            </div>
+            <!-- Add more education entries as needed -->
+            
+            <!-- Work Experience -->
+            <h3>Work Experience</h3>
+            <div class="experience-entry">
+                <input type="text" class="experience-job" placeholder="Job Title">
+                <input type="text" class="experience-company" placeholder="Company">
+                <input type="text" class="experience-year" placeholder="Year">
+            </div>
+            <!-- Add more work experience entries as needed -->
+            
+            <!-- Skills -->
+            <h3>Skills</h3>
+            <input type="text" id="skill1" placeholder="Skill 1">
+            <input type="text" id="skill2" placeholder="Skill 2">
+            <!-- Add more skills as needed -->
+
+            <!-- Photo -->
+            <h3>Photo</h3>
+            <input type="file" id="photoInput1" accept="image/*"> <!-- Add this input element -->
+            <div id="photoPreview1"></div> <!-- Add a div to display the selected photo -->
+            
+            <!-- Add more sections as needed -->
+            
+            <button type="button" id="downloadButton1" class="template-button">Download Template 1</button>
+        </section>
+        <div style="margin-top: 20px;"></div> <!-- Add a gap between templates -->
+        <section id="template2" style="display: none;">
+            <!-- Template 2 content here -->
+            <div class="resume-header">
+                <h1 class="text-4xl md:text-[50px] font-semibold">Hello I'm Ravi chandra reddy</h1>
+                <p class="text-xl mt-2 md:mt-4 tracking-wide">Designer - Developer - Freelancer</p>
+            </div>
+            
+            <!-- Resume form -->
+            <section id="resume-form">
+                <h2>Resume Information</h2>
+                <form id="resumeForm">
+                    <!-- Participant Name -->
+                    <h3>Participant Name</h3>
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <input type="text" id="lastName" placeholder="Last Name">
+
+                    <!-- Education -->
+                    <h3>Education</h3>
+                    <div class="education-entry">
+                        <input type="text" class="education-school" placeholder="School/University">
+                        <input type="text" class="education-degree" placeholder="Degree">
+                        <input type="text" class="education-year" placeholder="Year">
+                    </div>
+                    <!-- Add more education entries as needed -->
+
+                    <!-- Work Experience -->
+                    <h3>Work Experience</h3>
+                    <div class="experience-entry">
+                        <input type="text" class="experience-job" placeholder="Job Title">
+                        <input type="text" class="experience-company" placeholder="Company">
+                        <input type="text" class="experience-year" placeholder="Year">
+                    </div>
+                    <!-- Add more work experience entries as needed -->
+
+                    <!-- Skills -->
+                    <h3>Skills</h3>
+                    <input type="text" id="skill1" placeholder="Skill 1">
+                    <input type="text" id="skill2" placeholder="Skill 2">
+                    <!-- Add more skills as needed -->
+
+                    <!-- Add more sections as needed -->
+
+                    <button type="button" id="downloadButton2" class="template-button">Download Template 2</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <!-- Removed the download background link -->
+    </footer>
+    <!-- JavaScript for interactivity -->
+    
+        <script>
+            // Toggle visibility of Template 1 and Template 2 sections
+            document.getElementById("template1Button").addEventListener("click", function() {
+                document.getElementById("template1").style.display = "block";
+                document.getElementById("template2").style.display = "none";
+            });
+            
+            document.getElementById("template2Button").addEventListener("click", function() {
+                document.getElementById("template1").style.display = "none";
+                document.getElementById("template2").style.display = "block";
+            });
+        
+            // Function to handle displaying the phone number
+            function displayPhoneNumber() {
+                alert("Phone Number: 9440336396");
+            }
+        
+            // Function to handle displaying the uploaded photo for Template 1
+            document.getElementById("photoInput1").addEventListener("change", function(event) {
+                const photoPreview = document.getElementById("photoPreview1");
+                const file = event.target.files[0];
+        
+                if (file) {
+                    const reader = new FileReader();
+        
+                    reader.onload = function(e) {
+                        const img = new Image();
+                        img.src = e.target.result;
+                        img.width = 150; // Adjust the width as needed
+                        img.height = 150; // Adjust the height as needed
+                        photoPreview.innerHTML = ""; // Clear previous previews
+                        photoPreview.appendChild(img);
+                    };
+        
+                    reader.readAsDataURL(file);
+                }
+            });
+        
+            
+        
+            // Add click event listeners to the "Download Template" buttons
+            document.getElementById("downloadButton1").addEventListener("click", function() {
+                // Replace this with the actual download logic for Template 1
+                document.getElementById("downloadButton1").addEventListener("click", function() {
+                    // Get the content of Template 1
+                    const resumeContent = document.getElementById("template1").outerHTML;
+        
+                    // Create a Blob containing the HTML content
+                    const blob = new Blob([resumeContent], { type: "text/html" });
+        
+                    // Create a URL for the Blob
+                    const url = URL.createObjectURL(blob);
+        
+                    // Create a link element and trigger a click event to start the download
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "template1.html";
+                    link.click();
+        
+                    // Clean up by revoking the Blob URL
+                    URL.revokeObjectURL(url);
+                });
+        
+                
+            });
+        
+            document.getElementById("downloadButton2").addEventListener("click", function() {
+                // Replace this with the actual download logic for Template 2
+                document.getElementById("downloadButton2").addEventListener("click", function() {
+                    // Get the content of Template 2
+                    const resumeContent = document.getElementById("template2").outerHTML;
+        
+                    // Create a Blob containing the HTML content
+                    const blob = new Blob([resumeContent], { type: "text/html" });
+        
+                    // Create a URL for the Blob
+                    const url = URL.createObjectURL(blob);
+        
+                    // Create a link element and trigger a click event to start the download
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "template2.html";
+                    link.click();
+        
+                    // Clean up by revoking the Blob URL
+                    URL.revokeObjectURL(url);
+                });
+                
+            });
+        </script>
+        
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/290d4f0eb4.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://source.unsplash.com/700x400/?white');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+}
+
+.template-button {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 0 10px;
+}
